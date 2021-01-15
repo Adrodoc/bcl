@@ -32,8 +32,8 @@ struct GlobalPtr;
 
 template <typename T>
 struct GlobalPtr {
-  uint64_t rank = 0;
-  uint64_t ptr = 0;
+  uint32_t rank = 0;
+  uint32_t ptr = 0;
 
   typedef T type;
 
@@ -59,7 +59,7 @@ struct GlobalPtr {
     return *this;
   }
 
-  GlobalPtr(const uint64_t rank = 0, const uint64_t ptr = 0) :
+  GlobalPtr(const uint32_t rank = 0, const uint32_t ptr = 0) :
     rank(rank), ptr(ptr) {}
 
   GlobalPtr(const std::nullptr_t null) {
